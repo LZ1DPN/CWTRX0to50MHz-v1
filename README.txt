@@ -1,47 +1,32 @@
-Използван е китайски Forty9-er от ибей,
-и приемник разработен от SM0XGY
-http://www.waveguide.se/?article=ne612-receiver-experiment
+I use a Chinese Forty9-er from eBay , and receiver developed by SM0XGY, in his web site 
 
-Прочетете целият документ:
-Purdum0316-QST-in-Depth-AssemblyManual.pdf
-Всички промени са на база него.
+http://www.waveguide.se/?article=ne612-receiver-experiment 
 
-След това направих още няколко модификации на схемите
-корекциите от pdf до реално работещите схеми са в снимките,
-PDF-ите съм ги ползвал само за сглобяването
-на китайският фортинаер, защото използвам 
-друг DDS генератор а не този в pdf на модификацията.
-съответно и софтуерът за ардуино е модифициран по оригиналът на AD7C.
+Please, read the entire document: Purdum0316-QST-in-Depth-AssemblyManual.pdf
 
-добавен в сорса е и морз декодер, който е спрян временно,
-но е тестван и работи с останалата част. (нямам място за още един бутон,
-който пуска декодирането.)
+All changes are based on it. And make few modifications in schemes from this pdf,
+to adjust real working schemes.  This PDF I've use only to assembly "Chinese" Forty9-er,
+because I use other DDS generator (not this from original pdf). Respectively, 
+My arduino software sketch is mod on the basis of the original AD7C and VK8BN mod.
 
-Бутонът на сидиромът се използва за смяна на бандовете.
+In scheme of the Chinese Forty9-er, I finally change LPF windings to run from 0 to 30 MHz 
+I remove several windings from L4 coil,  and change two capacitors C17, C18  to 100 pF 
+(I can not remember now exactly, but I made LPF from 0 to 30 MHz, with an online calculator).
 
-В схемата на китайският фортинаер накрая промених LPF , за да може
-да работи от 0 до 30 МХц - развих няколко намотки от бобината L4
-и смених двата кондензатора C17,C18 с други от 100 pF (не помня вече точно,
-но изчислих LPF за 0 до 30 МХц с един онлайн калкулатор).
+I remove the consistent LC group (scheme LxCx - 1st mod in top pictures), 
+which replaces one quartz and put a wire to bridge to eliminate interruptions in quartz place. 
+And I also remove the Capacitor before quartz, to stop frequency filtering.
 
-премахнах последователната LC група (на схемата LxCx), която заменя единият кварц и сложих
-една жица за мостче, за да елиминирам прекъсването на мястото на кварца,
-премахнах кондензаторът преди кварца, за да не филтрира към маса никакви честоти.
+I replace both end transistors (in driver and PA) in transmitter for Q6 - 8050, I put 2n3904, and
+instead Q5 - D882, I put BD139 with sink (not provided in the kit and I added mine).
 
-Замених двата крайни транзистора на предавателя, с което наистина стана 2-3W, а не
-както обещаните от китайците 3W, а реални 1W. вместо Q6 - 8050, сложих 2n3904,
-а вместо Q5 - D882, сложих BD237 с радиатор (нямаше предвиден в кита и добавих мой).
-
-На етап крайно стъпало ще се добавят допълнително LPF за основните обхвати.
-
-Това е общо взето.
  
-цена
-10$ 49ер
-4$ за 10 бр NE612
-9 лв за LCD
-2$ за Ардуиното
-12$ за AD9851
-10-тина лева за букси, реле, цокли, копчета и др. липсващи елементи
-=======
-под 40$
+Price:
+10$ Forty9-er
+4$ for 10 pcs NE612
+4$ for LCD
+4$ for Arduino Uno
+12$ for AD9851
+~5$ for knobs, relay, zener and other komponents ...
+==========
+below 40$
